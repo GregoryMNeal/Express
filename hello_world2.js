@@ -26,7 +26,7 @@ app.get('/dogs', function (request, response) {
   response.send('Woof');
 });
 
-// Functional Requirement #2 - Add a route for URL /dogs, display "Woof"
+// Functional Requirement #3 - Add a route for URL /cats_and_dogs, display "Living together"
 app.get('/cats_and_dogs', function (request, response) {
   response.send('Living together');
 });

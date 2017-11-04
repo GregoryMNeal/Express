@@ -1,4 +1,4 @@
-/*  Query Parameters
+/*  Query Parameters 2 - Multiple Query Parameters
 
 Functional Requirements:
 
@@ -45,11 +45,13 @@ app.get('/greet/:slug', function (request, response) {
   response.send('Hello ' + slug + '!');
 });
 
-// Functional Requirement #6 - Display the year you were born when you report your age in a query parameter
+// Functional Requirement #6 - Say hello and display the User's age
+// Example URL:  http://localhost:8000/year?name=Greg&age=35
 app.get('/year', function (request, response) {
-  var age = request.query.age || 100; // double-pipe sets the default
-  var birthyear = 2017 - age;
-  response.send('You were born in  ' + birthyear + '.');
+  var q_name = request.query.name || 'World'; // double-pipe sets the default
+  var q_age = request.query.age || 100; // double-pipe sets the default
+  var birthyear = 2017 - q_age;
+  response.send('Hello ' + q_name + '!  You were born in  ' + birthyear + '.');
 });
 
 // Listen for requests

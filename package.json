@@ -1,0 +1,26 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "description": "Digital Crafts Express.js Exercises",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarleyGeek/Express.git"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "Greg Neal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarleyGeek/Express/issues"
+  },
+  "homepage": "https://github.com/HarleyGeek/Express#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "hbs": "^4.0.1"
+  }
+}

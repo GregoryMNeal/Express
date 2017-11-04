@@ -7,7 +7,7 @@ Functional Requirements:
 */
 
 var express = require('express'); // used to make an Express app
-var app = express();
+var app = express(); // make the app
 
 // get method for root URL:/
 app.get('/', function (request, response) {

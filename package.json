@@ -1,5 +1,5 @@
 {
-  "name": "express",
+  "name": "dc-express",
   "version": "1.0.0",
   "description": "Digital Crafts Express.js Exercises",
   "main": "app.js",

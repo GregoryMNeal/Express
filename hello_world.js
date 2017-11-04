@@ -10,7 +10,7 @@ var express = require('express'); // used to make an Express app
 var app = express();
 
 // get method for root URL:/
-app.get('/', fuction request, response) {
+app.get('/', function (request, response) {
   response.send('Hello World');
 });
 

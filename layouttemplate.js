@@ -11,39 +11,40 @@ var app = express(); // make the app
 app.set('view engine', 'hbs'); // use handlebars for template rendering
 
 app.get('/', function (request, response) {
-  var context = {title: 'Hello', message: 'Hello World!'};
-  response.render('helloworld.hbs', context);
+  var context = {title: 'Hello', body: 'Hello World!'};
+  response.render('layout.hbs', context);
 });
 
 app.get('/cats', function (request, response) {
-  var context = {title: 'Cats', message: 'Meow'};
-  response.render('cats.hbs', context);
+  var context = {title: 'Cats', body: 'Meow'};
+  response.render('layout.hbs', context);
 });
 
 app.get('/dogs', function (request, response) {
-  var context = {title: 'Dogs', message: 'Woof'};
-  response.render('dogs.hbs', context);
+  var context = {title: 'Dogs', body: 'Woof'};
+  response.render('layout.hbs', context);
 });
 
 app.get('/cats_and_dogs', function (request, response) {
-  var context = {title: 'Cats and Dogs', message: 'Living together'};
-  response.render('catsanddogs.hbs', context);
+  var context = {title: 'Cats and Dogs', body: 'Living together'};
+  response.render('layout.hbs', context);
 });
 
 app.get('/greet/:slug', function (request, response) {
   var slug = request.params.slug;
-  var context = {title: 'Greeting', message: 'Hello ' + slug + '!'};
-  response.render('greeting.hbs', context);
+  var context = {title: 'Greeting', body: 'Hello ' + slug + '!'};
+  response.render('layout.hbs', context);
 });
 
 app.get('/year', function (request, response) {
   var age = request.query.age || 100; // double-pipe sets the default
   var birthyear = 2017 - age;
-  var context = {title: 'Birthyear', message: 'You were born in  ' + birthyear + '.'};
-  response.render('birthyear.hbs', context);
+  var context = {title: 'Birthyear', body: 'You were born in  ' + birthyear + '.'};
+  response.render('layout.hbs', context);
 });
 
 app.get('/fav_animals', function (request, response) {
+  var render_fav_animals = true;
   var animals = [
     { name: 'cats', favorite: false },
     { name: 'dogs', favorite: true },
@@ -51,8 +52,8 @@ app.get('/fav_animals', function (request, response) {
     { name: 'earth worms', favorite: false },
     { name: 'horses', favorite: true },
   ];
-  var context = {title: 'Templates 2', animals: animals};
-  response.render('animals.hbs', context);
+  var context = {title: 'Templates 2', render_fav_animals: render_fav_animals, animals: animals};
+  response.render('layout.hbs', context);
 });
 
 // Listen for requests

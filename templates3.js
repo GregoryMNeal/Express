@@ -1,14 +1,9 @@
-/*  Templates 3
-
-Functional Requirements:
-
-1.  Go back through each page you have created previous and make an .hbs for each one, use resp.render to render them.
-
-*/
+//  Templates 3
 
 var express = require('express'); // used to make an Express app
 var app = express(); // make the app
 app.set('view engine', 'hbs'); // use handlebars for template rendering
+app.use(express.static('public')); // set up the app to serve files from the public folder
 
 app.get('/', function (request, response) {
   var context = {title: 'Hello', message: 'Hello World!'};
